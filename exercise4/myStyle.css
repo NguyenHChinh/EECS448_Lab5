@@ -1,0 +1,13 @@
+.center {
+    text-align: center;
+    margin: auto;
+}
+
+input {
+    width: 50px;
+}
+
+p {
+    border-style: solid;
+    border-width: 1px;
+}
