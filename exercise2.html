@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 2: Slide Show</title>
+</head>
+<body> 
+    <img src="exercise2/redpanda1.png" alt="A picture of a very cute red panda" id="image" width="500" height="500">
+    <br>
+    <button id="previous">Previous</button>
+    <button id="next">Next</button>
+    <script>
+        // Linking variables to document elements
+        let pictureSourceNum = 1;
+        let img = document.getElementById("image");
+        
+        let previous = document.getElementById("previous");
+        let next = document.getElementById("next");
+
+        // Adding function to "Previous" button
+        previous.onclick = function(e) {
+            // Wraps back if at lower limit, otherwise subtract 1
+            if (pictureSourceNum == 1) {
+                pictureSourceNum = 5;
+            } else {
+                pictureSourceNum--;
+            }
+
+            // Update picture
+            updatePicture();
+        }
+
+        // Adding function to "Next" button
+        next.onclick = function(e) {
+            // Wraps back if at upper limit, otherwise add 1
+            if (pictureSourceNum == 5) {
+                pictureSourceNum = 1;
+            } else {
+                pictureSourceNum++;
+            }
+
+            // Update picture
+            updatePicture();
+        }
+
+        // Function to update src property of image element
+        function updatePicture() {
+            let imageSource = "exercise2/redpanda";
+            imageSource += pictureSourceNum + ".png";
+            img.src = imageSource;
+        }
+    </script>
+</body>
+</html>
