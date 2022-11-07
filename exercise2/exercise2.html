@@ -7,7 +7,7 @@
     <title>Exercise 2: Slide Show</title>
 </head>
 <body> 
-    <img src="exercise2/redpanda1.png" alt="A picture of a very cute red panda" id="image" width="500" height="500">
+    <img src="redpanda1.png" alt="A picture of a very cute red panda" id="image" width="500" height="500">
     <br>
     <button id="previous">Previous</button>
     <button id="next">Next</button>
@@ -47,7 +47,7 @@
 
         // Function to update src property of image element
         function updatePicture() {
-            let imageSource = "exercise2/redpanda";
+            let imageSource = "redpanda";
             imageSource += pictureSourceNum + ".png";
             img.src = imageSource;
         }
